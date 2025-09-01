@@ -1,6 +1,7 @@
 import torchruntime
 import platform
 import os
+os.environ["TORCH_PLATFORM"] = "cu124"
 gpus = torchruntime.device_db.get_gpus()
 if "TORCH_PLATFORM" in os.environ:
     torch_platform = os.environ["TORCH_PLATFORM"]
